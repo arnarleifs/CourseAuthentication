@@ -18,7 +18,8 @@ namespace CoursesAuth
                 new Scope
                 {
                     Name = "CoursesAPI",
-                    Description = "An API for retrieving courses for the University of Helsinki"
+                    Description = "An API for retrieving courses for the University of Helsinki",
+                    IncludeAllClaimsForUser = true
                 }
             };
         }

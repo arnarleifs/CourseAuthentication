@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoursesAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class CoursesController : Controller
     {
@@ -23,7 +24,6 @@ namespace CoursesAPI.Controllers
             return _courseService.GetAllCourses();
         }
 
-        [AllowAnonymous]
         [HttpGet]
         [Route("{courseId:int}", Name = "GetCourseById")]
         public CourseInstanceDto GetCourseById(int courseId)
